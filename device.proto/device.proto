@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package device;
+
+message CommandRequest {
+  string device_id = 1;
+  CommandType command = 2;
+  bytes data = 3;
+}
+
+enum CommandType {
+  UNKNOWN = 0;
+  STATUS = 1;
+  START = 2;
+  STOP = 3;
+  RESET = 4;
+}
+
+message CommandResponse {
+  string device_id = 1;
+  ResponseType status = 2;
+  string message = 3;
+}
+
+enum ResponseType {
+  OK = 0;
+  ERROR = 1;
+  BUSY = 2;
+}
