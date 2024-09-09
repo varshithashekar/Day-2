@@ -1,0 +1,16 @@
+[ports]
+controller = "/dev/ttys001"  
+emulator = "/dev/ttys002"    
+
+[serial]
+baudrate = 9600             
+timeout = 2     
+            
+[controller]
+update_interval = 0.1  
+
+[emulator]
+command_delay = 0.5         
+
+[orchestrator]
+controller_init_delay = 2   
